@@ -1,0 +1,46 @@
+Calculate the Cumulative Length of Multiple Strings Without Using Built-in Length Methods
+
+Write a Java program that reads n strings from the user and calculates the total cumulative length of all the strings without using any built-in string length functions, such as .length(), .toCharArray(), or enhanced for-each loops.
+
+import java.util.*;
+
+public class Cumulativelength {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number of strings");
+		int n = sc.nextInt();
+		sc.nextLine();
+		int cumulativelength=0;
+		System.out.println("Enter strings");
+		for(int i=0;i<n;i++) {
+			String a = sc.nextLine();
+		int count=0;
+		while(true) {
+			try{
+				a.charAt(count);
+				count++;
+			}
+			catch(Exception e) {
+				break;
+			}
+		}
+		cumulativelength+=count;
+		
+
+	}
+	System.out.println("Cumulative length: "+cumulativelength);
+
+}
+}
+
+Input:
+Enter number of strings
+3
+Enter strings
+apple
+banana
+car
+Output:
+Cumulative length: 14
