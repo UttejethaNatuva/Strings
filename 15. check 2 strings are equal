@@ -1,0 +1,56 @@
+Java program to Check if two strings are equal
+
+import java.util.*;
+public class Stringsqual {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Strings: ");
+		String s1 = sc.nextLine();
+		String s2 = sc.nextLine();
+		int len1 = 0;
+        for (int i = 0; ; i++) {
+            try {
+                s1.charAt(i);
+                len1++;
+            } catch (Exception e) {
+                break;
+            }
+        }
+        int len2 = 0;
+        for (int i = 0; ; i++) {
+            try {
+                s2.charAt(i);
+                len2++;
+            } catch (Exception e) {
+                break;
+            }
+        }
+        if (len1 != len2) {
+            System.out.println("Strings are NOT equal.");
+            return;
+        }
+        boolean isEqual = true;
+        for (int i = 0; i < len1; i++) {
+            if (s1.charAt(i) != s2.charAt(i)) {
+                isEqual = false;
+                break;
+            }
+        }
+
+        if (isEqual) {
+            System.out.println("Strings are equal.");
+        } else {
+            System.out.println("Strings are NOT equal.");
+        }
+    }
+}
+
+Input:
+Enter Strings: 
+Hey Hi Hello
+Hey Hi Hello
+
+Output:
+Strings are equal.
