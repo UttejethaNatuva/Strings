@@ -1,0 +1,29 @@
+Java program to find number of Characters of string
+
+import java.util.*;
+public class Charctercount {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a String: ");
+		String str = sc.nextLine();
+		int count = 0;
+		try {
+			while(true) {
+				str.charAt(count);
+				count++;
+			}
+		}
+		catch(Exception e) {
+		}
+		
+		System.out.println(count);
+	}
+
+}
+
+Output:
+Enter a String: 
+Uttejetha
+9
