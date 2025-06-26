@@ -1,0 +1,32 @@
+Java Program to find length of String
+
+import java.util.*;
+public class LengthofString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		String str = sc.nextLine();
+		int length=0;
+		while(true) {
+			try {
+				str.charAt(length);
+				length++;
+			}
+			catch(Exception e) {
+				break;
+			}
+		}
+		System.out.println(length);
+		
+		
+
+	}
+
+}
+
+Input:
+Hey hi
+
+Output:
+6
