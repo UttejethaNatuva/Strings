@@ -1,0 +1,34 @@
+input an email from user. you have to create a username from email by deleting @_____ from gmail and display username
+
+import java.util.*;
+public class Emailusername {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter email: ");
+		String email = sc.nextLine();
+		String username = "";
+		for(int i=0; ;i++) {
+			try {
+				char ch = email.charAt(i);
+				if(ch == '@') {
+					break;
+				}
+				username += ch;
+			}catch(Exception e) {
+				break;
+			}
+		}
+		System.out.println(username);
+
+	}
+
+}
+
+Output:
+Enter email: 
+Uttejethanatuva05@gmail.com
+Uttejethanatuva05
+
+
